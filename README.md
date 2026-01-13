@@ -75,8 +75,7 @@ struct MyApp: App {
 ```
 
 Configuration:
-- does not perform network requests
-- loads cached flags if available
+- loads flags or cached flags if available
 - never blocks app startup
 
 ---
