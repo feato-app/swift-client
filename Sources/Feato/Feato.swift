@@ -10,6 +10,10 @@ public enum Feato {
         let storage = FeatureFlagsStore()
         
         _store = FeatoStore(api: api, storage: storage)
+        
+        Task {
+            await _store?.refresh()
+        }
     }
     
     public static func flag(_ key: String) -> Bool {
